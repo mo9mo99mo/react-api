@@ -10,12 +10,17 @@ ul.book_list {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 33.333333%);
+	justify-content: space-between;;
 }
 ul.book_list li {
   padding: 2%;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
 }
 .book_list li + li {
-  border-top:1px solid #ccc;
+  border-left:1px solid #ccc;
 }
 .txt_s {
   font-size: 80%;
