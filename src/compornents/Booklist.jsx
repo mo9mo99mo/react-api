@@ -20,7 +20,12 @@ const Booklist = (props) => {
                     ) : (
                         bookData.data.items.map((x, index) => (
                             <li key={index}>
+                                { x.volumeInfo.imageLinks.smallThumbnail} === null ? (
                                 <figure><img src={x.volumeInfo.imageLinks.smallThumbnail} /></figure>
+                                    ) : (
+                                <p class="txt_s noimage">No image</p>
+                                    )
+
                                 <h2>{x.volumeInfo.title}</h2>
                                 <p class="txt_s">著者：{x.volumeInfo.authors}</p>
                             </li>
